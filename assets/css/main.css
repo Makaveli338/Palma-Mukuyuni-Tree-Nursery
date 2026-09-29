@@ -114,6 +114,19 @@ body{
   @apply flex items-center justify-center;
 }
 
+@keyframes bounce-x {
+  0%, 100% {
+    transform: translateX(0) translateY(-50%);
+  }
+  50% {
+    transform: translateX(-25%) translateY(-50%);
+  }
+}
+
+@utility animate-bounce-x {
+  animation: bounce-x 1s infinite;
+}
+
 /* Hide the up/down spinner arrows on number inputs. */
 @utility no-spinner {
   &::-webkit-inner-spin-button,

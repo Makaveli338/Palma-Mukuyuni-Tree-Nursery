@@ -1,7 +1,7 @@
 <template>
   <main class="space-y-25">
     <!--Hero section-->
-    <section class="bg-[url('/hero.png')] bg-cover bg-center text-white">
+    <section class="bg-[url('/hero.png')] bg-cover bg-top text-white">
       <Header />
 
       <div data-aos="fade-right" class="py-16 space-y-2.5 section mx-auto">
@@ -113,7 +113,7 @@
         </div>
 
         <div data-aos="fade-left" class="col-span-full sm:col-span-5">
-          <img src="/tree-nursery.png" alt="Tree Nursery" />
+          <img src="/tree-nursery.png" alt="Tree Nursery" class="w-full h-full object-cover rounded-2xl" />
         </div>
       </div>
     </section>
@@ -136,7 +136,9 @@
         </div>
       </div>
 
+      <div class="relative rounded-2xl overflow-hidden">
       <div
+        ref="whoWeServeScroll"
         data-aos="fade-up"
         class="flex gap-4 max-sm:flex-col overflow-x-auto scrollbar-hide text-white"
       >
@@ -194,11 +196,25 @@
           </p>
         </div>
       </div>
+
+      <!--Scroll hint-->
+      <div class="hidden sm:block pointer-events-none absolute inset-y-0 right-0 w-24 bg-linear-to-l from-black/40 to-transparent"></div>
+      <button
+        type="button"
+        aria-label="Scroll right"
+        @click="scrollWhoWeServe"
+        class="hidden sm:flex absolute right-2 top-1/2 -translate-y-1/2 size-9 rounded-full bg-primary text-white items-center justify-center animate-bounce-x cursor-pointer"
+      >
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      </div>
     </div>
 
     <!--What matters to us-->
     <div class="space-y-9 section">
-      <div class="space-y-2 text-center">
+      <div data-aos="fade-up" class="space-y-2 text-center">
         <div class="primary-badge mx-auto">What matters to us</div>
         <p class="text-4xl font-semibold">
           Our <span class="text-primary">Core</span> Values
@@ -209,7 +225,7 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div data-aos="fade-up" class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!--Quality-->
         <div
           class="py-5 px-4 rounded-2xl gap-5 flex flex-col items-center text-center bg-[#F4FBF5]"
@@ -266,7 +282,7 @@
     <div class="bg-[url('/frame.png')] bg-cover bg-center text-white py-13.5">
       <div class="section space-y-9">
         <div class="flex lg:items-end gap-3 max-sm:flex-col justify-between">
-          <div class="space-y-3">
+          <div data-aos="fade-right" class="space-y-3">
             <div class="primary-badge">People, Skills & Environment</div>
             <p class="max-w-2xl text-lg font-light">
               Our work is about more than producing seedlings. We aim to create
@@ -276,14 +292,14 @@
             </p>
           </div>
 
-          <p class="max-w-sm text-4xl font-semibold">
+          <p data-aos="fade-left" class="max-w-sm text-4xl font-semibold">
             Growing More <span class="text-[#B7EF55]"> Than Trees</span>
           </p>
         </div>
 
         <div class="flex gap-5 max-sm:flex-col">
           <!--Youth Empowerment-->
-          <div
+          <div data-aos="fade-right"
             class="py-5 px-4 rounded-2xl gap-5 flex flex-col items-center text-center bg-[#F4FBF5] w-full sm:w-1/2"
           >
             <img src="/youth.svg" alt="Youth empowerment badge" />
@@ -306,7 +322,7 @@
           </div>
 
           <!--Environmental Conservation-->
-          <div
+          <div data-aos="fade-left"
             class="py-5 px-4 rounded-2xl gap-5 flex flex-col items-center text-center bg-[#F4FBF5] w-full sm:w-1/2"
           >
             <img
@@ -335,7 +351,7 @@
 
     <!--How we do it-->
     <div class="section space-y-10">
-      <div class="space-y-2 text-center">
+      <div data-aos="fade-up" class="space-y-2 text-center">
         <div class="primary-badge mx-auto">How we do it</div>
         <p class="text-4xl font-semibold">
           Our <span class="text-primary"> Approach</span>
@@ -346,7 +362,7 @@
       </div>
 
       <div class="flex gap-6 max-sm:flex-col">
-        <div>
+        <div data-aos="fade-right">
           <div class="p-10 text-right space-y-2">
             <p class="text-lg font-bold text-primary">Grow with Care</p>
             <p class="leading-6 text-[#5C5C5C] max-w-xs">
@@ -362,13 +378,15 @@
             </p>
           </div>
         </div>
-        <img src="/approach.png" alt="Seedling being held" />
-        <div>
+        <div data-aos="fade-up" class="md:self-stretch">
+          <img src="/approach.png" alt="Seedling being held" class="w-full h-full object-cover rounded-2xl" />
+        </div>
+        <div data-aos="fade-left">
           <div class="p-10 text-right space-y-2">
-            <p class="text-lg font-bold text-primary">Grow with Care</p>
+            <p class="text-lg font-bold text-primary">Grow with Impact</p>
             <p class="leading-6 text-[#5C5C5C] max-w-xs">
-              We nurture seedlings through their early stages with attention to
-              their health and development.
+              We measure our success by the thriving farms, homes and
+              communities our trees help build.
             </p>
           </div>
           <div class="p-10 text-right space-y-2">
@@ -384,7 +402,7 @@
 
     <!--Objectives-->
     <div class="section space-y-10">
-      <div class="space-y-2 text-center">
+      <div data-aos="fade-up" class="space-y-2 text-center">
         <div class="primary-badge mx-auto">Objectives</div>
         <p class="text-4xl font-semibold">
           WHat We <span class="text-primary"> Aim to Achieve</span>
@@ -396,7 +414,7 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-2.5 relative">
+      <div data-aos="fade-up" class="grid md:grid-cols-2 lg:grid-cols-4 gap-2.5 relative">
         <div
           class="rounded-xl relative bg-[#F7F7F7] flex gap-7.5 overflow-hidden"
         >
@@ -474,47 +492,49 @@
     </div>
 
     <!--Where every tree begins-->
-    <div
-      class="bg-[url('/explore-nursery.png')] bg-cover bg-center text-white section !px-20 py-33.75 rounded-2xl space-y-12"
-    >
-      <div class="space-y-4">
-        <p class="text-4xl font-bold">
-          Where <span class="text-[#B8F34B]"> Every</span> Tree Begins
-        </p>
-
-        <div class="space-y-3 text-3xl">
-          <p>
-            Our nursery is where our commitment to quality starts. We carefully
-            nurture seedlings and planting materials before they make their way
-            to farms, gardens, institutions, landscapes and communities across
-            Kenya.
+    <div class="px-4">
+      <div data-aos="fade-up"
+        class="bg-[url('/explore-nursery.png')] bg-cover bg-center text-white !p-7 section sm:!px-20 sm:py-33.75 rounded-2xl space-y-12"
+      >
+        <div class="space-y-4">
+          <p class="text-4xl font-bold">
+            Where <span class="text-[#B8F34B]"> Every</span> Tree Begins
           </p>
-          <p>
-            See our seedlings. Explore our growing spaces. Talk to our team.
-          </p>
-        </div>
-      </div>
-
-     <a href="https://maps.app.goo.gl/AFZoJx1KYq2wbbpe7" type="button" class="primary-btn">
-          Visit Our Nursery
-          <div class="size-6 rounded-full bg-white flex-center">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4 12L12 4M12 9.33333V4H6.66667"
-                stroke="#D6B15E"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+  
+          <div class="space-y-3 text-lg sm:text-3xl">
+            <p>
+              Our nursery is where our commitment to quality starts. We carefully
+              nurture seedlings and planting materials before they make their way
+              to farms, gardens, institutions, landscapes and communities across
+              Kenya.
+            </p>
+            <p>
+              See our seedlings. Explore our growing spaces. Talk to our team.
+            </p>
           </div>
-        </a>
+        </div>
+  
+       <a href="https://maps.app.goo.gl/AFZoJx1KYq2wbbpe7" type="button" class="primary-btn">
+            Visit Our Nursery
+            <div class="size-6 rounded-full bg-white flex-center">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 12L12 4M12 9.33333V4H6.66667"
+                  stroke="#D6B15E"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </a>
+      </div>
     </div>
 
     <Footer />
@@ -525,4 +545,10 @@
 import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
 import ComingSoon from "~/components/ComingSoon.vue";
+
+const whoWeServeScroll = ref<HTMLElement | null>(null);
+
+function scrollWhoWeServe() {
+  whoWeServeScroll.value?.scrollBy({ left: 320, behavior: "smooth" });
+}
 </script>
