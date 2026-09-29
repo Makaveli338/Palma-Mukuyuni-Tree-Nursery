@@ -29,7 +29,7 @@ const businessSchema = {
       logo: `${siteUrl}/palma-mukuyuni-logo.svg`,
       image: `${siteUrl}/hero.png`,
       telephone: ['+254754787926', '+254723787180'],
-      email: 'palmatr.mwanzi@gmail.com',
+      email: 'palmamukuyuni@gmail.com',
       priceRange: 'KES',
       address: {
         '@type': 'PostalAddress',

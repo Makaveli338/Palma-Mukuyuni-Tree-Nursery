@@ -581,7 +581,7 @@
 
     <!--Contact us-->
     <div id="contact" class="space-y-3 text-center">
-      <p class="text-2xl font-medium text-primary font-playfair">Contact Us</p>
+      <p class="text-2xl font-medium text-primary">Contact Us</p>
 
       <div class="section mx-auto grid grid-cols-12 text-start sm:pl-9 px-5">
         <!--col-span-9-->
@@ -802,8 +802,8 @@
                 <div class="text-sm">
                   <a
                     class="cursor-pointer relative inline-block no-underline w-fit after:content-[''] after:absolute after:w-full after:scale-x-0 after:rounded after:h-[0.05em] after:bottom-0 after:left-0 after:bg-current after:origin-bottom-right after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left"
-                    href="mailto:palmatr.mwanzi@gmail.com"
-                    >palmatr.mwanzi@gmail.com</a
+                    href="mailto:palmamukuyuni@gmail.com"
+                    >palmamukuyuni@gmail.com</a
                   >
                 </div>
               </div>
@@ -985,34 +985,68 @@
 <script setup>
 import { reactive, ref } from "vue";
 
-const CONTACT_EMAIL = "palmamukuyni@gmail.com";
+const CONTACT_EMAIL = "palmamukuyuni@gmail";
 const form = reactive({ name: "", phone: "", email: "", message: "", botcheck: "" });
 const status = ref("idle");
+
+const WEB3FORMS_KEY = "f3085174-b362-4f65-9e86-e8205b0b4653";
 
 async function submitForm() {
   if (form.botcheck) return;
   status.value = "sending";
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 15000);
+  const fields = {
+    name: form.name,
+    phone: form.phone,
+    email: form.email,
+    message: form.message,
+  };
+  const request = WEB3FORMS_KEY
+    ? {
+        url: "https://api.web3forms.com/submit",
+        body: {
+          ...fields,
+          access_key: WEB3FORMS_KEY,
+          subject: `New website enquiry from ${form.name}`,
+          from_name: "Palma Mukuyuni website",
+          replyto: form.email,
+        },
+      }
+    : {
+        url: `https://formsubmit.co/ajax/${CONTACT_EMAIL}`,
+        body: {
+          ...fields,
+          _subject: `New website enquiry from ${form.name}`,
+          _replyto: form.email,
+          _template: "table",
+          _captcha: "false",
+        },
+      };
   try {
-    const res = await fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
+    const res = await fetch(request.url, {
       method: "POST",
+      signal: controller.signal,
       headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify({
-        name: form.name,
-        phone: form.phone,
-        email: form.email,
-        message: form.message,
-        _subject: `New website enquiry from ${form.name}`,
-        _replyto: form.email,
-        _template: "table",
-        _captcha: "false",
-      }),
+      body: JSON.stringify(request.body),
     });
-    const data = await res.json();
-    if (!res.ok || data.success === "false") throw new Error("send failed");
+    const text = await res.text();
+    let data = {};
+    try {
+      data = JSON.parse(text);
+    } catch {
+      // some providers return odd bodies on errors; rely on the HTTP status
+    }
+    if (!res.ok || data.success === false || data.success === "false") {
+      throw new Error(`send failed (${res.status}): ${text.slice(0, 200)}`);
+    }
     Object.assign(form, { name: "", phone: "", email: "", message: "" });
     status.value = "success";
-  } catch {
+  } catch (err) {
+    console.error("Contact form failed:", err);
     status.value = "error";
+  } finally {
+    clearTimeout(timer);
   }
 }
 
