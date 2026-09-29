@@ -1,0 +1,21 @@
+{
+  "name": "Palma-Mukuyuni-Tree-Nursery",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.11",
+    "nuxt": "^4.5.2",
+    "tailwindcss": "^4.3.2"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "aos": "^2.3.4"
+  }
+}
