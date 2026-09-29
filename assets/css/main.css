@@ -146,8 +146,8 @@ body{
   scroll-margin-top: 88px;
 }
 
-/* AOS is disabled below the lg breakpoint (phones and tablets) (see plugins/aos.client.ts) */
-@media (max-width: 1023px) {
+/* AOS is disabled below the sm breakpoint (phones) (see plugins/aos.client.ts) */
+@media (max-width: 639px) {
   [data-aos] {
     opacity: 1 !important;
     transform: none !important;

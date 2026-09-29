@@ -1,3 +1,5 @@
 <template>
-  <NuxtPage />
+  <section class="overflow-x-clip">
+    <NuxtPage />
+  </section>
 </template>

@@ -8,7 +8,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       easing: 'ease-out',
       once: false,
       offset: 80,
-      disable: () => window.innerWidth < 1024,
+      disable: () => window.innerWidth < 640,
     })
   }
 
