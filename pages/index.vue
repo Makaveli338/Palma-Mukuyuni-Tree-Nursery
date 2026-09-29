@@ -11,14 +11,16 @@
         <div class="space-y-1.5 max-w-115.75">
           <h1 class="text-4xl lg:text-6xl font-semibold">
             Growing Trees, <span class="text-[#B8F34B]">Growing Futures.</span>
+            <span class="sr-only"> Tree nursery in Mukuyuni, Machakos, Kenya</span>
           </h1>
           <i class="text-2xl">Tupande Miti. Tufaidike Kesho.</i>
         </div>
 
         <p class="max-w-3xl text-lg">
-          We supply high-quality tree seedlings, fruit trees, ornamental plants
-          and landscaping solutions for homes, schools, institutions and
-          businesses in Kenya and beyond.
+          We supply high-quality tree seedlings, fruit trees, indigenous trees,
+          ornamental plants and landscaping solutions from our tree nursery in
+          Mukuyuni, Machakos County, for homes, farms, schools, institutions and
+          businesses across Kenya.
         </p>
 
         <a href="#contact" class="primary-btn">Make An Enquiry</a>
@@ -56,7 +58,7 @@
               </p>
             </div>
 
-            <button class="outlined-btn">
+            <NuxtLink to="/about" class="outlined-btn">
               More About Us
               <svg
                 width="24"
@@ -74,7 +76,7 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </button>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -92,10 +94,10 @@
             <div
               class="rounded-xl px-5 py-9.5 space-y-5 sm:space-y-12.5 bg-[#F5F5F5] w-full sm:w-1/2"
             >
-              <p class="text-primary text-2xl font-bold">
+              <h3 class="text-primary text-2xl font-bold">
                 Our <br />
                 Vision
-              </p>
+              </h3>
               <p class="leading-5.5">
                 To be a leading tree nursery and landscaping provider in Kenya
                 by promoting sustainable environmental practices and supplying
@@ -116,10 +118,10 @@
             <div
               class="rounded-xl px-5 py-9.5 space-y-5 sm:space-y-12.5 bg-primary w-full sm:w-1/2 text-white"
             >
-              <p class="text-2xl font-bold">
+              <h3 class="text-2xl font-bold">
                 Our <br />
                 Mission
-              </p>
+              </h3>
               <p class="leading-5.5">
                 To provide high-quality seedlings, professional landscaping
                 services, and environmental conservation solutions that
@@ -144,16 +146,19 @@
               conservation projects.
             </p>
             <p>
-              Enquire from us to get information about available seedlings and
-              plants.
+              Looking for miche ya miti, tree seedlings for sale in Machakos? Enquire
+              from us to get information about available seedlings and plants, or
+              <NuxtLink to="/products" class="text-primary underline"
+                >browse our products</NuxtLink
+              >.
             </p>
           </div>
         </div>
 
-        <p data-aos="fade-left" class="font-bold leading-12 text-4xl max-w-md">
-          Plants for <span class="text-primary">productive</span> and
+        <h2 data-aos="fade-left" class="font-bold leading-12 text-4xl max-w-md">
+          Tree seedlings for <span class="text-primary">productive</span> and
           <span class="text-primary">beautiful spaces.</span>
-        </p>
+        </h2>
       </div>
 
       <div data-aos="fade-up" class="grid grid-cols-12 gap-4">
@@ -162,7 +167,7 @@
           class="col-span-full lg:col-span-3 flex flex-col items-center max-sm:py-8 sm:pb-13 space-y-3 bg-[#F0F7EF] sm:pt-23.5 px-9 rounded-2xl"
         >
           <div class="space-y-1.5 text-center">
-            <p class="text-lg font-semibold text-[#256E37]">Fruits Trees</p>
+            <h3 class="text-lg font-semibold text-[#256E37]">Fruit Trees</h3>
             <p class="text-sm text-[#5C5C5C]">
               Fruit tree varieties including mangoes, oranges, avocados, pawpaw,
               apples, grapes and pomegranate.
@@ -185,9 +190,9 @@
               />
 
               <div class="space-y-1.5">
-                <p class="text-lg font-semibold text-[#27805A]">
+                <h3 class="text-lg font-semibold text-[#27805A]">
                   Flowering Plants
-                </p>
+                </h3>
                 <p class="text-sm text-[#5C5C5C]">
                   Flowering plants that add color, beauty and visual appeal to
                   gardens and outdoor spaces.
@@ -200,9 +205,9 @@
               class="h-fit col-span-full md:col-span-7 rounded-2xl pt-2.5 px-6 pb-8 bg-[#E8F2E7] flex max-sm:flex-col items-center"
             >
               <div class="space-y-1.5">
-                <p class="text-lg font-semibold text-[#687D27]">
+                <h3 class="text-lg font-semibold text-[#687D27]">
                   Indigenous Trees
-                </p>
+                </h3>
                 <p class="text-sm text-[#5C5C5C]">
                   Native trees selected for reforestation, land restoration,
                   biodiversity, agroforestry and conservation
@@ -219,7 +224,7 @@
               class="col-span-full md:col-span-7 rounded-2xl pt-2.5 px-6 pb-8 bg-[#EAF6F0] flex max-sm:flex-col items-center"
             >
               <div class="space-y-1.5">
-                <p class="text-lg font-semibold text-[#27805A]">Shade trees</p>
+                <h3 class="text-lg font-semibold text-[#27805A]">Shade trees</h3>
                 <p class="text-sm text-[#5C5C5C]">
                   Trees suitable for creating shade and enhancing homes, farms,
                   compounds, institutions and public spaces.
@@ -234,9 +239,9 @@
               class="col-span-full md:col-span-5 rounded-2xl pt-2.5 px-6 pb-8 bg-[#E8F2E7] flex max-sm:flex-col items-center"
             >
               <div class="space-y-1.5">
-                <p class="text-lg font-semibold text-[#27805A]">
+                <h3 class="text-lg font-semibold text-[#27805A]">
                   Ornamental Plants
-                </p>
+                </h3>
                 <p class="text-sm text-[#5C5C5C]">
                   Attractive plants for improving gardens, compounds,
                   institutions, businesses and landscaped spaces.
@@ -249,8 +254,8 @@
         </div>
       </div>
 
-      <button data-aos="fade-up" class="outlined-btn mx-auto">
-        Enquire About Our Products
+      <NuxtLink to="/products" data-aos="fade-up" class="outlined-btn mx-auto">
+        View Our Products
         <svg
           width="24"
           height="24"
@@ -267,7 +272,7 @@
             stroke-linejoin="round"
           />
         </svg>
-      </button>
+      </NuxtLink>
     </section>
 
     <!--Other services-->
@@ -278,10 +283,10 @@
 
         <div class="flex max-sm:flex-col gap-3 justify-between sm:items-start">
           <div data-aos="fade-right" class="space-y-2">
-            <p class="font-bold text-4xl max-w-sm">
+            <h2 class="font-bold text-4xl max-w-sm">
               <span class="text-primary"> Professional </span>
               Landscaping Services
-            </p>
+            </h2>
           </div>
 
           <p data-aos="fade-left" class="text-lg font-light max-w-2xl">
@@ -300,7 +305,7 @@
         <div
           class="bg-[url('/garden-design.png')] bg-cover bg-center h-87.5 px-4 pb-8 flex flex-col justify-end gap-2.5 rounded-2xl"
         >
-          <p class="text-lg font-bold">Garden Design</p>
+          <h3 class="text-lg font-bold">Garden Design</h3>
           <p class="leading-5.5">
             Thoughtful planting plans for attractive, functional outdoor spaces.
           </p>
@@ -310,7 +315,7 @@
         <div
           class="bg-[url('/tree-planting.png')] bg-cover bg-center h-87.5 px-4 pb-8 flex flex-col justify-end gap-2.5 rounded-2xl"
         >
-          <p class="text-lg font-bold">Tree Planting</p>
+          <h3 class="text-lg font-bold">Tree Planting</h3>
           <p class="leading-5.5">
             Quality seedlings and practical planting guidance for long-term
             growth.
@@ -321,7 +326,7 @@
         <div
           class="bg-[url('/institutional-landscaping.png')] bg-cover bg-center h-87.5 px-4 pb-8 flex flex-col justify-end gap-2.5 rounded-2xl"
         >
-          <p class="text-lg font-bold">Institutional Landscaping</p>
+          <h3 class="text-lg font-bold">Institutional Landscaping</h3>
           <p class="leading-5.5">
             Greening solutions for schools, churches, offices and public spaces.
           </p>
@@ -330,7 +335,7 @@
         <div
           class="bg-[url('/garden-maintenance.png')] bg-cover bg-center h-87.5 px-4 pb-8 flex flex-col justify-end gap-2.5 rounded-2xl"
         >
-          <p class="text-lg font-bold">Garden Maintenance</p>
+          <h3 class="text-lg font-bold">Garden Maintenance</h3>
           <p class="leading-5.5">
             Pruning, plant care and ongoing maintenance for healthy landscapes.
           </p>
@@ -347,10 +352,10 @@
         <div data-aos="fade-right" class="primary-badge">Why Choose Us</div>
 
         <div class="flex max-sm:flex-col gap-3 justify-between sm:items-start">
-          <p data-aos="fade-right" class="font-bold text-4xl max-w-sm">
+          <h2 data-aos="fade-right" class="font-bold text-4xl max-w-sm">
             Growing with
             <span class="text-primary"> quality and purpose. </span>
-          </p>
+          </h2>
 
           <p data-aos="fade-left" class="text-lg font-light max-w-2xl">
             We combine quality planting materials, practical nursery knowledge,
@@ -376,9 +381,9 @@
               <img src="/tree.svg" alt="tree-icon" class="size-8" />
 
               <div class="space-y-1 max-w-73.75">
-                <p class="text-primary font-bold">
+                <h3 class="text-primary font-bold">
                   Quality & Healthy Seedlings
-                </p>
+                </h3>
                 <p class="font-light">
                   Carefully grown planting materials for your needs.
                 </p>
@@ -389,7 +394,7 @@
               <img src="/tree.svg" alt="tree-icon" class="size-8" />
 
               <div class="space-y-1 max-w-73.25">
-                <p class="text-primary font-bold">Affordable Prices</p>
+                <h3 class="text-primary font-bold">Affordable Prices</h3>
                 <p class="font-light">
                   Practical options for individuals, farmers and institutions.
                 </p>
@@ -404,7 +409,7 @@
               <img src="/tree.svg" alt="tree-icon" class="size-8" />
 
               <div class="space-y-1 max-w-73.75">
-                <p class="text-primary font-bold">Professional Landscaping</p>
+                <h3 class="text-primary font-bold">Professional Landscaping</h3>
                 <p class="font-light">
                   Garden design, planting, maintenance and compound
                   beautification.
@@ -416,7 +421,7 @@
               <img src="/tree.svg" alt="tree-icon" class="size-8" />
 
               <div class="space-y-1 max-w-73.25">
-                <p class="text-primary font-bold">Environmental Conservation</p>
+                <h3 class="text-primary font-bold">Environmental Conservation</h3>
                 <p class="font-light">
                   We support reforestation, restoration and greener communities.
                 </p>
@@ -431,7 +436,7 @@
               <img src="/tree.svg" alt="tree-icon" class="size-8" />
 
               <div class="space-y-1 max-w-73.75">
-                <p class="text-primary font-bold">Reliable Customer Support</p>
+                <h3 class="text-primary font-bold">Reliable Customer Support</h3>
                 <p class="font-light">
                   We are available to help you choose suitable planting
                   solutions.
@@ -443,9 +448,9 @@
               <img src="/tree.svg" alt="tree-icon" class="size-8" />
 
               <div class="space-y-1 max-w-73.25">
-                <p class="text-primary font-bold">
+                <h3 class="text-primary font-bold">
                   Convenient 7 day week Service
-                </p>
+                </h3>
                 <p class="font-light">Our business is open every day.</p>
               </div>
             </div>
@@ -460,9 +465,9 @@
     >
       <div data-aos="fade-right" class="section space-y-7.5">
         <div class="space-y-4">
-          <p class="text-4xl font-bold">
+          <h2 class="text-4xl font-bold">
             Experience Our <span class="text-[#B8F34B]"> Nursery</span>
-          </p>
+          </h2>
           <p class="text-xl sm:text-3xl max-w-218.75">
             See our plants up close, explore our growing spaces and find the
             right trees for your needs.
@@ -500,9 +505,9 @@
     <div data-aos="fade-up" class="space-y-6 section">
       <!--Heading-->
       <div class="space-y-2 text-center">
-        <p class="text-4xl font-bold">
+        <h2 class="text-4xl font-bold">
           Our <span class="text-primary"> Blog</span>
-        </p>
+        </h2>
         <p class="text-2xl font-light">
           Practical tips, expert insights and helpful ideas to help you choose,
           plant and care for trees while creating greener, healthier spaces.
@@ -581,7 +586,7 @@
 
     <!--Contact us-->
     <div id="contact" class="space-y-3 text-center">
-      <p class="text-2xl font-medium text-primary">Contact Us</p>
+      <h2 class="text-2xl font-medium text-primary">Contact Us</h2>
 
       <div class="section mx-auto grid grid-cols-12 text-start sm:pl-9 px-5">
         <!--col-span-9-->

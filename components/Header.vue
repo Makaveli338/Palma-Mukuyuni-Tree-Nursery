@@ -14,6 +14,7 @@
       <div class="hidden lg:flex gap-6 items-center text-lg">
         <NuxtLink to="/" active-class="nav-link-active" class="nav-link font-semibold">Home</NuxtLink>
         <NuxtLink to="/about" active-class="nav-link-active" class="nav-link font-medium">About Us</NuxtLink>
+        <NuxtLink to="/products" active-class="nav-link-active" class="nav-link font-medium">Products</NuxtLink>
         <NuxtLink to="/gallery" active-class="nav-link-active" class="nav-link font-medium">Gallery</NuxtLink>
       </div>
 
@@ -43,6 +44,7 @@
         <nav class="flex flex-col gap-1 pt-3 text-lg">
           <NuxtLink to="/" active-class="nav-link-active" class="nav-link w-fit py-2 font-semibold" @click="isOpen = false">Home</NuxtLink>
           <NuxtLink to="/about" active-class="nav-link-active" class="nav-link w-fit py-2 font-medium" @click="isOpen = false">About Us</NuxtLink>
+          <NuxtLink to="/products" active-class="nav-link-active" class="nav-link w-fit py-2 font-medium" @click="isOpen = false">Products</NuxtLink>
           <NuxtLink to="/gallery" active-class="nav-link-active" class="nav-link w-fit py-2 font-medium" @click="isOpen = false">Gallery</NuxtLink>
         </nav>
 

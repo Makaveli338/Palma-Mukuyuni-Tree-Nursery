@@ -19,6 +19,7 @@
             <div class="flex gap-4 text-xl font-light">
               <NuxtLink to="/" active-class="nav-link-active" class="nav-link">Home</NuxtLink>
               <NuxtLink to="/about" active-class="nav-link-active" class="nav-link">About</NuxtLink>
+              <NuxtLink to="/products" active-class="nav-link-active" class="nav-link">Products</NuxtLink>
               <NuxtLink to="/gallery" active-class="nav-link-active" class="nav-link">Gallery</NuxtLink>
             </div>
 
