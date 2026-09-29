@@ -198,7 +198,7 @@
       </div>
 
       <!--Scroll hint-->
-      <div class="hidden sm:block pointer-events-none absolute inset-y-0 right-0 w-24 bg-linear-to-l from-black/40 to-transparent"></div>
+      <div class="rounded-r-2xl overflow-hidden hidden sm:block pointer-events-none absolute inset-y-0 right-0 w-24 bg-linear-to-l from-black/40 to-transparent"></div>
       <button
         type="button"
         aria-label="Scroll right"
