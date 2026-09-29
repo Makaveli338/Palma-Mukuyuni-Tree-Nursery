@@ -3,7 +3,7 @@
     <div class="section flex items-center justify-between w-full">
       <!--Logo-->
       <div class="flex gap-2.5">
-        <img src="/palma-mukuyuni-logo.svg" alt="/logo">
+        <img src="/palma-mukuyuni-logo.svg" alt="Palma Mukuyuni Tree Nursery logo">
         <div>
           <p class="text-xl font-bold">Palma Mukuyuni</p>
           <p class="text-sm font-medium">Tree Nursery</p>
@@ -18,7 +18,7 @@
       </div>
 
       <!--Contact us btn-->
-      <button class="primary-btn max-lg:!hidden">Contact Us</button>
+      <NuxtLink to="/#contact" class="primary-btn max-lg:!hidden">Contact Us</NuxtLink>
       <button @click="isOpen = !isOpen" class="block lg:hidden rounded-md p-2 text-white" aria-label="Open menu">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -47,7 +47,7 @@
         </nav>
 
         <div class="mt-auto">
-          <button class="primary-btn w-full justify-center" @click="isOpen = false">Contact Us</button>
+          <NuxtLink to="/#contact" class="primary-btn w-full justify-center" @click="isOpen = false">Contact Us</NuxtLink>
         </div>
       </div>
     </div>

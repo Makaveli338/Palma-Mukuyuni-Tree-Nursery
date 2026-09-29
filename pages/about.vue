@@ -5,7 +5,7 @@
       <Header />
 
       <div data-aos="fade-right" class="py-16 space-y-2.5 section mx-auto">
-        <p class="text-4xl font-semibold">About Us</p>
+        <h1 class="text-4xl font-semibold">About Us</h1>
 
         <p class="max-w-300 text-lg">
           Discover who we are, what we stand for and how we are helping create
@@ -113,7 +113,7 @@
         </div>
 
         <div data-aos="fade-left" class="col-span-full sm:col-span-5">
-          <img src="/tree-nursery.png" alt="Tree Nursery" class="w-full h-full object-cover rounded-2xl" />
+          <img src="/tree-nursery.png" alt="Palma Mukuyuni Tree Nursery grounds in Mukuyuni, Machakos" class="w-full h-full object-cover rounded-2xl" />
         </div>
       </div>
     </section>
@@ -545,6 +545,13 @@
 import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
 import ComingSoon from "~/components/ComingSoon.vue";
+
+useSeo({
+  title: "About Us | Palma Mukuyuni Tree Nursery, Machakos",
+  description:
+    "Learn about Palma Mukuyuni Tree Nursery: our mission, values and approach to growing quality tree seedlings and creating greener communities in Kenya.",
+  path: "/about",
+});
 
 const whoWeServeScroll = ref<HTMLElement | null>(null);
 

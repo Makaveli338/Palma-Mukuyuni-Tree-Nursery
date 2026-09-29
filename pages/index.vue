@@ -9,9 +9,9 @@
         class="py-9 sm:pt-38.75 sm:pb-39.5 space-y-10 section mx-auto"
       >
         <div class="space-y-1.5 max-w-115.75">
-          <p class="text-4xl lg:text-6xl font-semibold">
+          <h1 class="text-4xl lg:text-6xl font-semibold">
             Growing Trees, <span class="text-[#B8F34B]">Growing Futures.</span>
-          </p>
+          </h1>
           <i class="text-2xl">Tupande Miti. Tufaidike Kesho.</i>
         </div>
 
@@ -34,7 +34,7 @@
         >
 
         <div class="flex justify-between flex-col lg:flex-row gap-3">
-          <p data-aos="fade-right" class="font-semibold text-3xl">About Us</p>
+          <h2 data-aos="fade-right" class="font-semibold text-3xl">About Us</h2>
 
           <div data-aos="fade-left" class="max-w-3xl space-y-6">
             <div class="space-y-1.5 text-lg font-light">
@@ -169,7 +169,7 @@
             </p>
           </div>
 
-          <img src="/fruit-trees.png" alt="fruit tree" />
+          <img src="/fruit-trees.png" alt="Fruit tree seedlings for sale at Palma Mukuyuni Tree Nursery" />
         </div>
 
         <div class="col-span-full lg:col-span-9 space-y-4">
@@ -209,7 +209,7 @@
                 </p>
               </div>
 
-              <img src="/indigenous-trees.png" alt="indigenous trees" />
+              <img src="/indigenous-trees.png" alt="Indigenous tree seedlings grown in Mukuyuni, Machakos, Kenya" />
             </div>
           </div>
 
@@ -226,7 +226,7 @@
                 </p>
               </div>
 
-              <img src="/shade-trees.png" alt="shade trees" />
+              <img src="/shade-trees.png" alt="Shade tree seedlings for homes and institutions" />
             </div>
 
             <!--Ornamental Plants -->
@@ -243,7 +243,7 @@
                 </p>
               </div>
 
-              <img src="/ornamental-trees.png" alt="ornamental plants" />
+              <img src="/ornamental-trees.png" alt="Ornamental and flowering plants for landscaping" />
             </div>
           </div>
         </div>
@@ -363,7 +363,7 @@
       <div
         class="flex gap-10 flex-col lg:flex-row justify-between sm:items-center"
       >
-        <img data-aos="fade-right" src="/nursery.png" alt="seedlings-nursery" />
+        <img data-aos="fade-right" src="/nursery.png" alt="Rows of tree seedlings at Palma Mukuyuni Tree Nursery" />
 
         <div
           data-aos="fade-left"
@@ -600,21 +600,37 @@
             </div>
 
             <!--Input form-->
+            <form class="space-y-6" @submit.prevent="submitForm">
             <div class="space-y-2.5">
+              <input
+                v-model="form.botcheck"
+                type="text"
+                tabindex="-1"
+                autocomplete="off"
+                class="hidden"
+                aria-hidden="true"
+              />
               <div class="grid sm:grid-cols-2 gap-4">
                 <div class="space-y-1">
-                  <p class="text-sm text">Name</p>
+                  <label for="cf-name" class="text-sm text">Name</label>
                   <input
+                    id="cf-name"
+                    v-model="form.name"
                     type="text"
+                    required
+                    autocomplete="name"
                     placeholder="John Paul"
                     class="w-full border border-[#D1D5DB] rounded-md px-4 py-3 placeholder:text-[#D1D5DB] focus:outline-none focus:ring-2 focus:ring-[#6F8F88] bg-white"
                   />
                 </div>
 
                 <div class="space-y-1">
-                  <p class="text-sm text">Phone</p>
+                  <label for="cf-phone" class="text-sm text">Phone</label>
                   <input
-                    type="tell"
+                    id="cf-phone"
+                    v-model="form.phone"
+                    type="tel"
+                    autocomplete="tel"
                     placeholder="+254 70000000"
                     class="w-full border border-[#D1D5DB] rounded-md px-4 py-3 placeholder:text-[#D1D5DB] focus:outline-none focus:ring-2 focus:ring-[#6F8F88] bg-white"
                   />
@@ -622,17 +638,24 @@
               </div>
 
               <div class="space-y-1">
-                <p class="text-sm text">Email</p>
+                <label for="cf-email" class="text-sm text">Email</label>
                 <input
+                  id="cf-email"
+                  v-model="form.email"
                   type="email"
-                  placeholder="papapaul@mail.com"
+                  required
+                  autocomplete="email"
+                  placeholder="you@example.com"
                   class="w-full border border-[#D1D5DB] rounded-md px-4 py-3 placeholder:text-[#D1D5DB] focus:outline-none focus:ring-2 focus:ring-[#6F8F88] bg-white"
                 />
               </div>
 
               <div class="space-y-1">
-                <p class="text-sm text">Write your message</p>
+                <label for="cf-message" class="text-sm text">Write your message</label>
                 <textarea
+                  id="cf-message"
+                  v-model="form.message"
+                  required
                   placeholder="Your message"
                   rows="5"
                   class="w-full border border-[#D1D5DB] rounded-md px-4 py-3 placeholder:text-[#D1D5DB] focus:outline-none focus:ring-2 focus:ring-[#6F8F88] bg-white resize-none"
@@ -640,9 +663,26 @@
               </div>
             </div>
 
-            <div class="flex justify-end">
-              <button class="primary-btn">Send Message</button>
+            <div class="flex items-center justify-end gap-4">
+              <p
+                v-if="status === 'success'"
+                role="status"
+                class="text-sm text-primary"
+              >
+                Thank you! Your message has been sent. We'll get back to you soon.
+              </p>
+              <p v-if="status === 'error'" role="alert" class="text-sm text-red-600">
+                Something went wrong. Please call or WhatsApp us instead.
+              </p>
+              <button
+                type="submit"
+                class="primary-btn disabled:opacity-60"
+                :disabled="status === 'sending'"
+              >
+                {{ status === 'sending' ? 'Sending...' : 'Send Message' }}
+              </button>
             </div>
+            </form>
           </div>
         </div>
 
@@ -724,12 +764,12 @@
                 <div class="text-sm gap-0.5 flex flex-col">
                   <a
                     class="cursor-pointer relative inline-block no-underline w-fit after:content-[''] after:absolute after:w-full after:scale-x-0 after:rounded after:h-[0.05em] after:bottom-0 after:left-0 after:bg-current after:origin-bottom-right after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left"
-                    href="tel:+254 754 787 926"
+                    href="tel:+254754787926"
                     >+254 754 787 926</a
                   >
                   <a
                     class="cursor-pointer relative inline-block no-underline w-fit after:content-[''] after:absolute after:w-full after:scale-x-0 after:rounded after:h-[0.05em] after:bottom-0 after:left-0 after:bg-current after:origin-bottom-right after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left"
-                    href="tel:+254 723 787 180"
+                    href="tel:+254723787180"
                     >+254 723 787 180</a
                   >
                 </div>
@@ -762,7 +802,7 @@
                 <div class="text-sm">
                   <a
                     class="cursor-pointer relative inline-block no-underline w-fit after:content-[''] after:absolute after:w-full after:scale-x-0 after:rounded after:h-[0.05em] after:bottom-0 after:left-0 after:bg-current after:origin-bottom-right after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left"
-                    href="mail:palmatr.mwanzi@gmail.com"
+                    href="mailto:palmatr.mwanzi@gmail.com"
                     >palmatr.mwanzi@gmail.com</a
                   >
                 </div>
@@ -942,7 +982,46 @@
   </main>
 </template>
 
-<script>
+<script setup>
+import { reactive, ref } from "vue";
+
+const CONTACT_EMAIL = "palmamukuyni@gmail.com";
+const form = reactive({ name: "", phone: "", email: "", message: "", botcheck: "" });
+const status = ref("idle");
+
+async function submitForm() {
+  if (form.botcheck) return;
+  status.value = "sending";
+  try {
+    const res = await fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        name: form.name,
+        phone: form.phone,
+        email: form.email,
+        message: form.message,
+        _subject: `New website enquiry from ${form.name}`,
+        _replyto: form.email,
+        _template: "table",
+        _captcha: "false",
+      }),
+    });
+    const data = await res.json();
+    if (!res.ok || data.success === "false") throw new Error("send failed");
+    Object.assign(form, { name: "", phone: "", email: "", message: "" });
+    status.value = "success";
+  } catch {
+    status.value = "error";
+  }
+}
+
+useSeo({
+  title: "Palma Mukuyuni Tree Nursery | Tree Seedlings & Landscaping in Mukuyuni, Machakos, Kenya",
+  description:
+    "Buy quality tree seedlings, fruit trees, indigenous and ornamental plants at Palma Mukuyuni Tree Nursery, along Machakos - Wote road. Landscaping and garden design for homes, schools and institutions across Kenya.",
+  path: "/",
+});
 import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
 </script>
