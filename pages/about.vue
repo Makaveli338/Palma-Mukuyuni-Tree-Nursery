@@ -494,7 +494,7 @@
     <!--Where every tree begins-->
     <div class="px-4">
       <div data-aos="fade-up"
-        class="bg-[url('/explore-nursery.png')] bg-cover bg-center text-white !p-7 section sm:!px-20 sm:py-33.75 rounded-2xl space-y-12"
+        class="bg-[url('/explore-nursery.png')] bg-cover bg-center text-white !max-sm:p-7 section sm:!px-20 sm:py-33.75 rounded-2xl space-y-12"
       >
         <div class="space-y-4">
           <p class="text-4xl font-bold">
