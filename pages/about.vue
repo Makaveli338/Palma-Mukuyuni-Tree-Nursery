@@ -363,7 +363,7 @@
 
       <!--Body-->
       <div class="flex gap-6 max-sm:flex-col">
-        <div data-aos="fade-right">
+        <div data-aos="fade-right" class="flex flex-col justify-center">
           <div class="p-10 text-right space-y-2">
             <p class="text-lg font-bold text-primary">Grow with Care</p>
             <p class="leading-6 text-[#5C5C5C] max-w-xs">
@@ -382,7 +382,7 @@
         <div data-aos="fade-up" class="md:self-stretch">
           <img src="/approach.png" alt="Seedling being held" class="w-full h-full object-cover rounded-2xl" />
         </div>
-        <div data-aos="fade-left">
+        <div data-aos="fade-left" class="flex flex-col justify-center">
           <div class="p-10 text-left space-y-2">
             <p class="text-lg font-bold text-primary">Grow with Impact</p>
             <p class="leading-6 text-[#5C5C5C] max-w-xs">
