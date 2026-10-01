@@ -6,13 +6,13 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://palma-mukuyuni-tree-nursery.co.ke/products</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://palma-mukuyuni-tree-nursery.co.ke/about</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://palma-mukuyuni-tree-nursery.co.ke/about</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://palma-mukuyuni-tree-nursery.co.ke/products</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>

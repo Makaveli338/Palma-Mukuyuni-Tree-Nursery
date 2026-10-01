@@ -361,6 +361,7 @@
         </p>
       </div>
 
+      <!--Body-->
       <div class="flex gap-6 max-sm:flex-col">
         <div data-aos="fade-right">
           <div class="p-10 text-right space-y-2">
@@ -382,14 +383,14 @@
           <img src="/approach.png" alt="Seedling being held" class="w-full h-full object-cover rounded-2xl" />
         </div>
         <div data-aos="fade-left">
-          <div class="p-10 text-right space-y-2">
+          <div class="p-10 text-left space-y-2">
             <p class="text-lg font-bold text-primary">Grow with Impact</p>
             <p class="leading-6 text-[#5C5C5C] max-w-xs">
               We measure our success by the thriving farms, homes and
               communities our trees help build.
             </p>
           </div>
-          <div class="p-10 text-right space-y-2">
+          <div class="p-10 text-left space-y-2">
             <p class="text-lg font-bold text-primary">Plant with Purpose</p>
             <p class="leading-6 text-[#5C5C5C] max-w-xs">
               We help customers choose planting materials suited to their
