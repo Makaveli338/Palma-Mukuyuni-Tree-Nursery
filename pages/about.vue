@@ -140,11 +140,11 @@
       <div
         ref="whoWeServeScroll"
         data-aos="fade-up"
-        class="flex gap-4 max-sm:flex-col overflow-x-auto scrollbar-hide text-white"
+        class="flex gap-4 overflow-x-auto scrollbar-hide text-white"
       >
         <!--Families & Homeowners-->
         <div
-          class="bg-[url('/families.png')] bg-cover bg-center h-87.5 px-4 pb-8 flex flex-col justify-end gap-2.5 rounded-2xl sm:w-80 shrink-0"
+          class="bg-[url('/families.png')] bg-cover bg-center h-87.5 px-4 pb-8 flex flex-col justify-end gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
         >
           <p class="text-lg font-bold">Families & Homeowners</p>
           <p class="leading-5.5">
@@ -155,7 +155,7 @@
 
         <!--Farmers-->
         <div
-          class="bg-[url('/farmers.png')] bg-cover bg-center h-87.5 px-4 pb-8 flex flex-col justify-end gap-2.5 rounded-2xl sm:w-80 shrink-0"
+          class="bg-[url('/farmers.png')] bg-cover bg-center h-87.5 px-4 pb-8 flex flex-col justify-end gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
         >
           <p class="text-lg font-bold">Farmers</p>
           <p class="leading-5.5">
@@ -166,7 +166,7 @@
 
         <!--Institutions & Schools-->
         <div
-          class="bg-[url('/institutions.png')] bg-cover bg-center h-87.5 px-4 pb-8 flex flex-col justify-end gap-2.5 rounded-2xl sm:w-80 shrink-0"
+          class="bg-[url('/institutions.png')] bg-cover bg-center h-87.5 px-4 pb-8 flex flex-col justify-end gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
         >
           <p class="text-lg font-bold">Institutions & Schools</p>
           <p class="leading-5.5">
@@ -177,7 +177,7 @@
 
         <!--Businesses-->
         <div
-          class="bg-[url('/businesses.png')] bg-cover bg-center h-87.5 px-4 pb-8 flex flex-col justify-end gap-2.5 rounded-2xl sm:w-80 shrink-0"
+          class="bg-[url('/businesses.png')] bg-cover bg-center h-87.5 px-4 pb-8 flex flex-col justify-end gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
         >
           <p class="text-lg font-bold">Businesses</p>
           <p class="leading-5.5">
@@ -188,7 +188,7 @@
 
         <!--Communities-->
         <div
-          class="bg-[url('/communities.png')] bg-cover bg-center h-87.5 px-4 pb-8 flex flex-col justify-end gap-2.5 rounded-2xl sm:w-80 shrink-0"
+          class="bg-[url('/communities.png')] bg-cover bg-center h-87.5 px-4 pb-8 flex flex-col justify-end gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
         >
           <p class="text-lg font-bold">Communities</p>
           <p class="leading-5.5">
@@ -198,12 +198,12 @@
       </div>
 
       <!--Scroll hint-->
-      <div class="rounded-r-2xl overflow-hidden hidden sm:block pointer-events-none absolute inset-y-0 right-0 w-24 bg-linear-to-l from-black/40 to-transparent"></div>
+      <div class="rounded-r-2xl overflow-hidden pointer-events-none absolute inset-y-0 right-0 w-24 bg-linear-to-l from-black/40 to-transparent"></div>
       <button
         type="button"
         aria-label="Scroll right"
         @click="scrollWhoWeServe"
-        class="hidden sm:flex absolute right-2 top-1/2 -translate-y-1/2 size-9 rounded-full bg-primary text-white items-center justify-center animate-bounce-x cursor-pointer"
+        class="flex absolute right-2 top-1/2 -translate-y-1/2 size-9 rounded-full bg-primary text-white items-center justify-center animate-bounce-x cursor-pointer"
       >
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -364,14 +364,14 @@
       <!--Body-->
       <div class="flex gap-6 max-sm:flex-col">
         <div data-aos="fade-right" class="flex flex-col justify-center">
-          <div class="p-10 text-right space-y-2">
+          <div class="p-10 sm:text-right space-y-2">
             <p class="text-lg font-bold text-primary">Grow with Care</p>
             <p class="leading-6 text-[#5C5C5C] max-w-xs">
               We nurture seedlings through their early stages with attention to
               their health and development.
             </p>
           </div>
-          <div class="p-10 text-right space-y-2">
+          <div class="p-10 sm:text-right space-y-2">
             <p class="text-lg font-bold text-primary">Serve with Knowledge</p>
             <p class="leading-6 text-[#5C5C5C] max-w-xs">
               We combine our practical experience with customer guidance to make
@@ -379,7 +379,7 @@
             </p>
           </div>
         </div>
-        <div data-aos="fade-up" class="md:self-stretch">
+        <div data-aos="fade-up" class="max-sm:hidden md:self-stretch">
           <img src="/approach.png" alt="Seedling being held" class="w-full h-full object-cover rounded-2xl" />
         </div>
         <div data-aos="fade-left" class="flex flex-col justify-center">
@@ -495,7 +495,7 @@
     <!--Where every tree begins-->
     <div class="px-4">
       <div data-aos="fade-up"
-        class="bg-[url('/explore-nursery.png')] bg-cover bg-center text-white !max-sm:p-7 section sm:!px-20 sm:py-33.75 rounded-2xl space-y-12"
+        class="bg-[url('/explore-nursery.png')] bg-cover bg-center text-white p-7 section sm:!px-20 sm:py-33.75 rounded-2xl space-y-12"
       >
         <div class="space-y-4">
           <p class="text-4xl font-bold">
