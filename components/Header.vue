@@ -15,7 +15,7 @@
         <NuxtLink to="/" active-class="nav-link-active" class="nav-link font-semibold">Home</NuxtLink>
         <NuxtLink to="/about" active-class="nav-link-active" class="nav-link font-medium">About Us</NuxtLink>
         <NuxtLink to="/products" active-class="nav-link-active" class="nav-link font-medium">Products</NuxtLink>
-        <NuxtLink to="/gallery" active-class="nav-link-active" class="nav-link font-medium">Gallery</NuxtLink>
+        <NuxtLink to="/gallery" active-class="nav-link-active" class="nav-link font-medium hidden">Gallery</NuxtLink>
       </div>
 
       <!--Contact us btn-->
