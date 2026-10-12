@@ -681,7 +681,7 @@
               </p>
               <button
                 type="submit"
-                class="primary-btn disabled:opacity-60"
+                class="primary-btn disabled:opacity-60 whitespace-nowrap"
                 :disabled="status === 'sending'"
               >
                 {{ status === 'sending' ? 'Sending...' : 'Send Message' }}
